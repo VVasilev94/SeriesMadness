@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from "./components/header/Header"
 import Home from './components/home/Home';
 import SeriesCollection from './components/series-collection/SeriesCollection';
+import Login from './components/login/Login';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <Routes>
      <Route path='/' element={<Home/>} />
      <Route path='/series' element={<SeriesCollection/>} />
+     <Route path='/login' element={<Login/>} />
 
     </Routes>
     </div>
