@@ -12,9 +12,9 @@ const RegisterKeys = {
 export default function Register() {
   const { registerSubmitHandler } = useContext(AuthContext);
   const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
-      [RegisterFormKeys.Email]: '',
-      [RegisterFormKeys.Password]: '',
-      [RegisterFormKeys.ConfirmPassword]: '',
+      [RegisterKeys.Email]: '',
+      [RegisterKeys.Password]: '',
+      [RegisterKeys.ConfirmPassword]: '',
   });
 
   return (

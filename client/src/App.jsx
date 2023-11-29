@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-
+import { AuthProvider } from './contexts/authContext';
 
 import Header from "./components/header/Header"
 import Home from './components/home/Home';
@@ -11,6 +11,7 @@ import AddNewSeries from './components/addNewSeries/AddNewSeries';
 function App() {
 
   return (
+    <AuthProvider>
     <div id="main">
       <Header />
     
@@ -23,6 +24,7 @@ function App() {
 
     </Routes>
     </div>
+    </AuthProvider>
   )
 }
 
