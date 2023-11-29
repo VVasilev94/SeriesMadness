@@ -8,22 +8,22 @@ export default function AddNewSeries() {
                     <input type="text" id="title" name="title" placeholder="Enter series title..." />
 
                     <label htmlFor="year">Year:</label>
-                    <input type="text" id="year" name="year" placeholder="Enter series release year..." />
+                    <input type="number" id="year" name="year" placeholder="Enter series release year..." />
 
-                    <label htmlFor="levels">Genres:</label>
-                    <input type="number" id="genres" name="genres" min="1" placeholder="Enter genres..." />
+                    <label htmlFor="genres">Genres:</label>
+                    <input type="text" id="genres" name="genres" min="1" placeholder="Enter genres..." />
 
-                    <label htmlFor="game-img">Description:</label>
-                    <input type="text" id="description" name="description" placeholder="Enter short description..." />
+                    <label htmlFor="description">Starring:</label>
+                    <input type="text" id="description" name="description" placeholder="Enter show cast..." />
 
-                    <label htmlFor="game-img">imageUrl:</label>
+                    <label htmlFor="imageUrl">imageUrl:</label>
                     <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." />
 
-                    <label htmlFor="game-img">Producer:</label>
-                    <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." />
+                    <label htmlFor="producer">Producer:</label>
+                    <input type="text" id="producer" name="producer" placeholder="Enter producer..." />
 
-                    <label htmlFor="summary">Starring:</label>
-                    <textarea name="summary" id="summary"></textarea>
+                    <label htmlFor="description">Description:</label>
+                    <textarea name="description" id="description"></textarea>
                     <input className="btn submit" type="submit" value="Create Game" />
                 </div>
             </form>
