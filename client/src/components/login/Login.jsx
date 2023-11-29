@@ -1,11 +1,23 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import useForm from "../../hooks/useForm";
+import AuthContext from "../../contexts/authContext";
 
-
+const LoginKeys = {
+    Email: 'email',
+    Password: 'password',
+};
 
 export default function Login() {
+    const { loginSubmitHandler } = useContext(AuthContext);
+    const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
+        [LoginKeys.Email]: '',
+        [LoginKeys.Password]: '',
+    });
+
   return (
     <section id="login-page">
-      <form id="login">
+      <form id="login" onSubmit={onSubmit}>
         <div >
           <div className="brand-logo"></div>
           <h1>Login</h1>
@@ -13,16 +25,20 @@ export default function Login() {
           <input
             type="email"
             id="email"
-            name="email"
+            name={LoginKeys.Email}
             placeholder="email"
+            onChange={onChange}
+            value={values[LoginKeys.Email]}
           />
 
           <label htmlFor="login-pass">Password:</label>
           <input
             type="password"
             id="password"
-            name="password"
+            name={LoginKeys.Password}
             placeholder="password"
+            onChange={onChange}
+            value={values[LoginKeys.Password]}
            
           />
           <input type="submit" value="Login" />

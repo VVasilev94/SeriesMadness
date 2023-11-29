@@ -1,36 +1,64 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import AuthContext from "../../contexts/authContext";
+import useForm from "../../hooks/useForm";
+
+const RegisterKeys = {
+  Email: 'email',
+  Password: 'password',
+  RepeatPassword: 'repeat-password',
+};
 
 export default function Register() {
-    return (
-        <section id="register">
-          <div>
-            <h2>Register</h2>
-            <form id="register">
-            <label htmlFor="email">Email:</label>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                placeholder="email"
-              />
-              <label htmlFor="email">Password:</label>
-              <input
-                type="password"
-                name="password"
-                id="register-password"
-                placeholder="password"
-              />
-              <label htmlFor="email">Repeat Password:</label>
-              <input
-                type="password"
-                name="re-password"
-                id="repeat-password"
-                placeholder="repeat password"
-              />
-              <button type="submit">register</button>
-              <p >Already registered? <Link to="/login">Login</Link></p>
-            </form>
-          </div>
-        </section>
-    )
+  const { registerSubmitHandler } = useContext(AuthContext);
+  const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+      [RegisterFormKeys.Email]: '',
+      [RegisterFormKeys.Password]: '',
+      [RegisterFormKeys.ConfirmPassword]: '',
+  });
+
+  return (
+      <section id="register-page" className="content auth">
+          <form id="register" onSubmit={onSubmit}>
+              <div className="container">
+                  <div className="brand-logo"></div>
+                  <h1>Register</h1>
+
+                  <label htmlFor="email">Email:</label>
+                  <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="maria@email.com"
+                      onChange={onChange}
+                      values={values[RegisterKeys.Email]}
+                  />
+
+                  <label htmlFor="pass">Password:</label>
+                  <input
+                      type="password"
+                      name="password"
+                      id="register-password"
+                      onChange={onChange}
+                      values={values[RegisterKeys.Password]}
+                  />
+
+                  <label htmlFor="con-pass">Repeat Password:</label>
+                  <input
+                      type="password"
+                      name="repeat-password"
+                      id="repeat-password"
+                      onChange={onChange}
+                      values={values[RegisterKeys.RepeatPassword]}
+                  />
+
+                  <input className="btn submit" type="submit" value="Register" />
+
+                  <p className="field">
+                      <span>Already registered? <Link to="/login">Login</Link></span>
+                  </p>
+              </div>
+          </form>
+      </section>
+  );
 }
