@@ -10,7 +10,7 @@ export default function Register() {
               <input
                 type="text"
                 name="email"
-                id="register-email"
+                id="email"
                 placeholder="email"
               />
               <label htmlFor="email">Password:</label>
