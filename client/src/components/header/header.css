@@ -1,0 +1,43 @@
+.header-section {
+    background-color: lightcoral;
+}
+.header-section .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.navigation-container {
+    display: flex;
+    gap: 1em;
+}
+
+.user-wrapper{
+    display: flex;
+    gap: 0.5em;
+      
+}
+
+.guest-wrapper{
+    display: flex;
+    gap: 0.5em;
+}
+
+.logo-wrapper > * {
+    text-decoration: none;
+    
+}
+
+.dashboard-wrapper > *  { 
+    text-decoration: none;
+}
+
+.user-wrapper > * { 
+    text-decoration: none;
+}
+
+
+
+.guest-wrapper > * { 
+    text-decoration: none;
+}
