@@ -3,6 +3,8 @@ import Path from "../../../paths";
 import { pathToUrl } from "../../../utils/pathUtils";
 import StarRating from "../../rating/StarRating";
 
+import './latestSerie.css'
+
 export default function LatestSeries({
     _id,
     imageUrl,
