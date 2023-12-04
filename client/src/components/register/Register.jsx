@@ -3,6 +3,8 @@ import { useContext } from "react";
 import AuthContext from "../../contexts/authContext";
 import useForm from "../../hooks/useForm";
 
+import './register.css'
+
 const RegisterKeys = {
   Email: 'email',
   Password: 'password',

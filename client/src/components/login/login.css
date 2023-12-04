@@ -1,0 +1,71 @@
+#login-page {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #login {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brand-logo {
+    /* Your logo styles */
+    background-image: url('https://p1.hiclipart.com/preview/57/433/160/user-profile-circle-user-account-data-login-symbol-blackandwhite-line-art-png-clipart.jpg'); 
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #ccc;
+    border-radius: 50%;
+    background-size: cover;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  input[type='email'],
+  input[type='password'] {
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type='submit'] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type='submit']:hover {
+    background-color: #0056b3;
+  }
+  
+  .field {
+    text-align: center;
+  }
+  
+  .field a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .field a:hover {
+    text-decoration: underline;
+  }

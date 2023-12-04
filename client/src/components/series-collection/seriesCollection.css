@@ -1,0 +1,16 @@
+#catalog-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #catalog-page h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .no-articles {
+    color: #ff0000;
+    font-style: italic;
+    margin-top: 20px;
+  }
