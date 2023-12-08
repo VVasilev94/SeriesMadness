@@ -14,6 +14,7 @@ export default function Login() {
     const { loginSubmitHandler } = useContext(AuthContext);
     const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
         [LoginKeys.Email]: '',
+        [LoginKeys.Username]: '',
         [LoginKeys.Password]: '',
     });
 
@@ -31,6 +32,16 @@ export default function Login() {
             placeholder="email"
             onChange={onChange}
             value={values[LoginKeys.Email]}
+          />
+
+<label htmlFor="username">Username:</label>
+          <input
+            type="username"
+            id="username"
+            name={LoginKeys.Username}
+            placeholder="username"
+            onChange={onChange}
+            value={values[LoginKeys.Username]}
           />
 
           <label htmlFor="login-pass">Password:</label>

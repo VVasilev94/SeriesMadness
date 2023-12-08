@@ -20,19 +20,17 @@ function Home({
         <section id="welcome-world">
 
             <div className="welcome-message">
-                <h2>ALL new Series are</h2>
-                <h3>Only in SeriesMadness</h3>
+                <h2>Welcome to the world of TV series</h2>
             </div>
 
 
             <div id="home-page">
                 <h1>Latest Series</h1>
 
-                {latestSeries.map(serie => <LatestSerie {...serie} />)}
+                {latestSeries.map(serie => <LatestSerie key={serie._id} {...serie} />)}
 
                 {!latestSeries.length && <p className="no-articles">No series yet</p>}
 
-                <p>{email}</p>
             </div>
         </section>
     );

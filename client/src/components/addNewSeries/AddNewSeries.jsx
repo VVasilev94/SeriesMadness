@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import * as seriesService from '../../services/seriesService';
 
-import './addNewSeries.css'
+// import './addNewSeries.css'
 
 
 
@@ -44,7 +44,7 @@ export default function AddNewSeries() {
                     <input type="text" id="producer" name="producer" placeholder="Enter producer..." />
 
                     <label htmlFor="description">Description:</label>
-                    <textarea name="description" id="description"></textarea>
+                    <input type="text" id="description" name="description" placeholder="Enter short description..."/>
                     <input className="btn submit" type="submit" value="Create Serie" />
                 </div>
             </form>

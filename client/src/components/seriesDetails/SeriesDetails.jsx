@@ -14,7 +14,7 @@ import './seriesDetails.css'
 
 export default function SeriesDetails() {
     const navigate = useNavigate();
-    const { email, userId } = useContext(AuthContext);
+    const { userId } = useContext(AuthContext);
     const [series, setSeries] = useState({});
     const [comments, dispatch] = useReducer(reducer, []);
     const { serieId } = useParams();
@@ -38,7 +38,7 @@ export default function SeriesDetails() {
             values.comment
         );
 
-        newComment.owner = { email };
+        newComment.owner = { username };
 
         dispatch({
             type: 'ADD_COMMENT',
@@ -77,9 +77,9 @@ export default function SeriesDetails() {
                 <div className="details-comments">
                     <h2>Comments:</h2>
                     <ul>
-                        {comments.map(({ _id, text, owner: { email } }) => (
+                        {comments.map(({ _id, text, owner: { username } }) => (
                             <li key={_id} className="comment">
-                                <p>{email}: {text}</p>
+                                <p>{username}: {text}</p>
                             </li>
                         ))}
                     </ul>

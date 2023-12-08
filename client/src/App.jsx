@@ -9,6 +9,7 @@ import Register from './components/register/Register';
 import AddNewSeries from './components/addNewSeries/AddNewSeries';
 import SeriesDetails from './components/seriesDetails/SeriesDetails';
 import AuthGuard from './components/guards/AuthGuard';
+import EditSeries from './components/editSeries/editSeries';
 
 
 export function App() {
@@ -24,10 +25,12 @@ export function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path="/series/:serieId" element={<SeriesDetails />} />
+          
 
           <Route element={<AuthGuard />}>
 
           <Route path='/logout' element={<Logout />} />
+          <Route path='/series/:serieId/edit' element={<EditSeries />} />
           <Route path='/series/create' element={<AddNewSeries />} />
           </Route>
 
