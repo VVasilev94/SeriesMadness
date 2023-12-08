@@ -1,0 +1,41 @@
+/* Style for the input */
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  /* Style for the search button */
+  button {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style for the dropdown */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 100%;
+  }
+  
+  /* Style for each dropdown item */
+  .dropdown-item {
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+  }
+  
+  /* Hover effect on dropdown items */
+  .dropdown-item:hover {
+    background-color: #ddd;
+    color: #000;
+  }
