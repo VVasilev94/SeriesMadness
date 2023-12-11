@@ -16,7 +16,6 @@ export const getOne = async (serieId) => {
 
 export const getLatest = async () => {
     const query = new URLSearchParams({
-        // sortBy: `_createdOn desc`,
         offset: 0,
         pageSize: 3,
     });
