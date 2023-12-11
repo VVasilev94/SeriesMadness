@@ -1,7 +1,14 @@
+
 #create-page {
-    max-width: 800px;
+    max-width: 100em;
     margin: 0 auto;
     padding: 20px;
+    background-color: #ccc;
+    
+  }
+
+  .input-wrapper{
+    display: flex;
   }
   
   .auth {
@@ -13,11 +20,7 @@
     justify-content: center;
     align-items: center;
   }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
+ 
   
   h1 {
     font-size: 32px;

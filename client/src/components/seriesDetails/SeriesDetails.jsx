@@ -1,6 +1,8 @@
 import { useContext, useEffect, useReducer, useState, useMemo } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+import * as likeService from '../../services/likeService'
+
 import * as seriesService from '../../services/seriesService';
 import * as commentService from '../../services/commentService';
 import AuthContext from "../../contexts/authContext";
@@ -8,20 +10,26 @@ import reducer from './commentReducer';
 import useForm from '../../hooks/useForm';
 import { pathToUrl } from "../../utils/pathUtils";
 import Path from "../../paths";
+import LikeSeries from "../likeSeries/LikeSeries";
+
 
 import './seriesDetails.css'
 
 
 export default function SeriesDetails() {
     const navigate = useNavigate();
-    const { userId } = useContext(AuthContext);
+    const { userId, username } = useContext(AuthContext);
     const [series, setSeries] = useState({});
     const [comments, dispatch] = useReducer(reducer, []);
+    const [likes, setLikes] = useState([]);
     const { serieId } = useParams();
 
     useEffect(() => {
         seriesService.getOne(serieId)
             .then(setSeries);
+            
+            likeService.checkUserLikedSeries(userId, serieId)
+            .then((result) => setLikes(result)) 
 
         commentService.getAll(serieId)
             .then((result) => {
@@ -30,13 +38,18 @@ export default function SeriesDetails() {
                     payload: result,
                 });
             });
-    }, [serieId]);
+
+
+    }, [serieId,]);
+
+    
 
     const addCommentHandler = async (values) => {
         const newComment = await commentService.create(
             serieId,
             values.comment
         );
+        console.log(newComment);
 
         newComment.owner = { username };
 
@@ -66,6 +79,9 @@ export default function SeriesDetails() {
             <div className="info-section">
                 <div className="serie-header">
                     <img className="serie-img" src={series.imageUrl} alt={series.title} />
+                    <div>
+                        <LikeSeries userId={userId} serieId={serieId} likes={likes} />
+                    </div>
                     <h1>{series.title}</h1>
                     <span className="year">Year: {series.year}</span>
                     <p className="genres">Genres: {series.genres}</p>

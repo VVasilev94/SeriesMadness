@@ -5,7 +5,7 @@ import SearchBar from "../searchBar/SearchBar";
 
 
 export default function Header() {
-  const { isAuthenticated, email } = useContext(AuthContext);
+  const { isAuthenticated, username } = useContext(AuthContext);
 
   return (
     <header className={`header-section ${isAuthenticated ? 'logged-in' : 'logged-out'}`}>
@@ -29,7 +29,7 @@ export default function Header() {
               <div className="user-wrapper">
                 <Link to="/series/create">Add New Series</Link>
                 <Link to="/logout">Logout</Link>
-                <span>| {email}</span>
+                <span>| {username}</span>
               </div>
             )}
             {!isAuthenticated && (

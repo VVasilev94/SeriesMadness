@@ -5,3 +5,5 @@
 @import url('./layout.css');
 
 @import url('../components/header/header.css');
+
+@import url('../components/addNewSeries/addNewSeries.css')

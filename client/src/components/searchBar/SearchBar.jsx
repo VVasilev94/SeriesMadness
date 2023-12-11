@@ -27,7 +27,7 @@ export default function SearchBar(_id) {
   };
 
   return (
-    <div>
+    <div className="search-container">
       <input
         type="text"
         placeholder="Search by name"

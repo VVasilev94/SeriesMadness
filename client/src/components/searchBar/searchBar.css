@@ -13,6 +13,10 @@ input[type="text"] {
     border: none;
     cursor: pointer;
   }
+
+  .search-container {
+    position: relative; /* Ensure the parent has a position */
+  }
   
   /* Style for the dropdown */
   .dropdown {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-const StarRating = ({ userId, seriesId }) => {
+const StarRating = ({ userId, serieId }) => {
   const [ratings, setRatings] = useState({});
   const [userRating, setUserRating] = useState(0);
 
@@ -15,12 +15,12 @@ const StarRating = ({ userId, seriesId }) => {
 
   useEffect(() => {
     // Set user rating for the current post if available in stored ratings
-    if (ratings[userId] && ratings[userId][seriesId]) {
-      setUserRating(ratings[userId][seriesId]);
+    if (ratings[userId] && ratings[userId][serieId]) {
+      setUserRating(ratings[userId][serieId]);
     } else {
       setUserRating(0); // If no rating found, set to 0
     }
-  }, [ratings, userId, seriesId]);
+  }, [ratings, userId, serieId]);
 
   const handleRating = (ratingValue) => {
     // Update ratings object with the new rating for the current user and post
@@ -28,7 +28,7 @@ const StarRating = ({ userId, seriesId }) => {
       ...ratings,
       [userId]: {
         ...(ratings[userId] || {}),
-        [seriesId]: ratingValue,
+        [serieId]: ratingValue,
       },
     };
     setRatings(updatedRatings);
@@ -39,7 +39,7 @@ const StarRating = ({ userId, seriesId }) => {
 
   return (
     <div>
-      <p>User {userId} Post {seriesId} Rating: {userRating}</p>
+      <p>User {userId} Post {serieId} Rating: {userRating}</p>
       {[...Array(5)].map((_, index) => {
         const ratingValue = index + 1;
         return (
