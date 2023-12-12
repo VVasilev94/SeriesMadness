@@ -39,3 +39,4 @@ function Home({
 const EnhancedHome = withAuth(Home);
 
 export default EnhancedHome;
+

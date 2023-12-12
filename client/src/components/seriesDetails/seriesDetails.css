@@ -2,27 +2,34 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    
   }
   
   #series-details h1 {
     font-size: 32px;
     margin-bottom: 20px;
+    
   }
   
   .info-section {
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
+    background-color:antiquewhite;
   }
   
   .serie-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
   
   .serie-img {
     width: 200px;
-    height: auto;
-    margin-bottom: 10px;
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
     
   }
   
@@ -66,7 +73,7 @@
     display: inline-block;
     padding: 8px 16px;
     margin-right: 10px;
-    background-color: #007bff;
+    background-color:darkcyan;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -93,7 +100,7 @@
   }
   
   .btn.submit {
-    background-color: #007bff;
+    background-color:darkcyan;
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -102,5 +109,5 @@
   }
   
   .btn.submit:hover {
-    background-color: #0056b3;
+    background-color:darkcyan;
   }

@@ -1,86 +1,78 @@
+
 #register-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  #register {
-    width: 320px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  .brand-logo {
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    background-color: #ccc;
-    border-radius: 50%;
-    box-sizing: border-box;
-    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
-  }
-  
-  .brand-logo::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-    
-  
-    border-radius: 50%;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-top: 5px;
-    font-weight: bold;
-  }
-  
-  input[type='email'],
-  input[type='password'] {
-    background: #ecf0f3;
-    padding: 30px;
-    padding-left: 20px;
-    height: 50px;
-    margin-top: 10px;
-    font-size: 24px;
-    border-radius: 50px;
-    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
-  }
-  
-  input[type='submit'] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  input[type='submit']:hover {
-    background-color: #0056b3;
-  }
-  
-  .field {
-    text-align: center;
-  }
-  
-  .field a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .field a:hover {
-    text-decoration: underline;
-  }
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.register-container {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-container .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type='email'],
+input[type='username'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.btn.submit {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.submit:hover {
+  background-color: #0056b3;
+}
+
+p.field {
+  margin-top: 15px;
+  text-align: center;
+}
+
+p.field span {
+  font-size: 14px;
+}
+
+p.field span a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p.field span a:hover {
+  text-decoration: underline;
+}

@@ -49,7 +49,7 @@ export default function SeriesDetails() {
             serieId,
             values.comment
         );
-        console.log(newComment);
+       
 
         newComment.owner = { username };
 

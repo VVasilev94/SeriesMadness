@@ -18,7 +18,7 @@ export const checkUserLikedSeries = async (userId, serieId) => {
   });
 
   const liked = await request.get(`${baseUrl}?${query}`);
-  console.log(liked);
+  
 
   return liked
 };

@@ -6,7 +6,7 @@ import * as likesService from "../../services/likeService";
 export default function LikeSeries({ serieId, userId }) {
     const [likesCount, setLikesCount] = useState(0);
   const [likedByUser, setLikedByUser] = useState(false);
- console.log(likesCount);
+ 
 
   useEffect(() => {
         likesService.checkUserLikedSeries(userId, serieId)

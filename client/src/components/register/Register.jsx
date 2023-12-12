@@ -3,7 +3,11 @@ import { useContext } from "react";
 import AuthContext from "../../contexts/authContext";
 import useForm from "../../hooks/useForm";
 
-// import './register.css'
+import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import './register.css'
 
 const RegisterKeys = {
   Email: "email",
@@ -18,12 +22,32 @@ export default function Register() {
     [RegisterKeys.Email]: "",
     [RegisterKeys.Username]: "",
     [RegisterKeys.Password]: "",
-    [RegisterKeys.ConfirmPassword]: "",
+    [RegisterKeys.RepeatPassword]: "",
   });
 
+  const notifyErrorMissingField = () => toast.error("All fields are required!")
+  const notifyErrorPasswordsDontMatch = () => toast.error("Passwords do not match!")
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+   
+    if (!values[RegisterKeys.Email] || !values[RegisterKeys.Password] || !values[RegisterKeys.Username] || !values[RegisterKeys.RepeatPassword]){
+      notifyErrorMissingField();
+      return;
+    }
+
+    if(values[RegisterKeys.Password] !== values[RegisterKeys.RepeatPassword]) {
+      notifyErrorPasswordsDontMatch()
+      return
+    }
+
+    onSubmit(e);
+  };
+
   return (
-    <section id="register-page" className="content auth">
-      <form id="register" onSubmit={onSubmit}>
+    <section id="register-page" className="register-container">
+      <form id="register" onSubmit={handleSubmit}>
         <div className="container">
           <div className="brand-logo"></div>
           <h1>Register</h1>
@@ -65,6 +89,18 @@ export default function Register() {
           />
 
           <input className="btn submit" type="submit" value="Register" />
+          <ToastContainer
+            position="bottom-center"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
 
           <p className="field">
             <span>

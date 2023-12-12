@@ -14,6 +14,13 @@ export default function AddNewSeries() {
 
         const serieData = Object.fromEntries(new FormData(e.currentTarget));
 
+        const isAnyFieldEmpty = Object.values(serieData).some((value) => value === '');
+    if (isAnyFieldEmpty) {
+      
+      alert('All fields are required.');
+      return;
+    }
+
         try {
             await seriesService.create(serieData);
 

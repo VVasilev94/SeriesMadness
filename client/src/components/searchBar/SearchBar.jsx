@@ -12,7 +12,7 @@ export default function SearchBar(_id) {
     try {
       const result = await handleSearch(searchQuery);
       setSearchResults(result);
-      console.log(result);
+      
     } catch (error) {
       console.error('Error occurred:', error);
     }
@@ -28,14 +28,15 @@ export default function SearchBar(_id) {
 
   return (
     <div className="search-container">
-      <input
-        type="text"
-        placeholder="Search by name"
-        value={searchQuery}
-        onChange={handleInputChange}
-      />
-      <button onClick={performSearch}>Search</button>
-  
+      <div className="search-wrapper">
+			<input
+			type="text"
+			placeholder="Search by name"
+			value={searchQuery}
+			onChange={handleInputChange}
+			/>
+			<button onInput={performSearch}>Search</button>
+      </div>
       <div className="dropdown">
         {searchQuery && searchResults.length > 0 && searchResults
           .filter(result => result.title.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -48,7 +49,7 @@ export default function SearchBar(_id) {
         ))}
         {(!searchQuery) && (
           ''
-        )}
+          )}
       </div>
     </div>
   );

@@ -1,22 +1,44 @@
 /* Style for the input */
-input[type="text"] {
+.search-wrapper input[type="text"] {
     padding: 8px;
     font-size: 16px;
+    border-radius: 2em;
+    min-width: 21em;
+    max-width: 22em;
   }
   
   /* Style for the search button */
-  button {
-    padding: 8px 12px;
-    font-size: 16px;
+  .search-wrapper button {
+    padding: 5px;
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
+    max-width: 4em;
+    max-height: 4em;
+    border-radius: 3em;
   }
 
   .search-container {
     position: relative; /* Ensure the parent has a position */
+    display: flex;
+    flex-direction: column;
   }
+
+  .search-wrapper{
+    display: flex;
+    gap: 2em;
+    padding: 1em;
+    min-width: 35em;
+  }
+
+
+  .search-wrapper input { 
+    border-radius: 5em;
+  }
+
+ 
+
   
   /* Style for the dropdown */
   .dropdown {

@@ -3,25 +3,29 @@ import Path from "../../../paths";
 import { pathToUrl } from "../../../utils/pathUtils";
 import StarRating from "../../rating/StarRating";
 
-import './latestSerie.css'
+
+import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function LatestSeries({
     _id,
     imageUrl,
     title,
+    description
 }) {
     return (
-        <div className="serie">
-            <div className="image-wrap">
-                <img src={imageUrl} />
-            </div>
-            <h3>{title}</h3>
-            <div className="rating">
-                <StarRating/>
-            </div>
-            <div className="data-buttons">
-                <Link to={pathToUrl(Path.SerieDetails, { serieId: _id })} className="btn details-btn">Details</Link>
-            </div>
-        </div>
-    );
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={imageUrl} />
+          <Card.Body>
+            <Card.Title>{title}</Card.Title>
+            <StarRating/>
+            <Card.Text>
+          Description: {description}
+        </Card.Text>
+    
+            <Link  to={pathToUrl(Path.SerieDetails, { serieId: _id })} className="details-btn">Details</Link>
+          </Card.Body>
+        </Card>
+      );
 }

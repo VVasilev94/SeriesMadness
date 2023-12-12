@@ -12,12 +12,13 @@ import AuthGuard from './components/guards/AuthGuard';
 import EditSeries from './components/editSeries/editSeries';
 
 
+
 export function App() {
 
   return (
     <AuthProvider>
       <Header />
-      <div id="main-section">
+      <div id="main-section" >
 
         <Routes>
           <Route path='/' element={<Home />} />
