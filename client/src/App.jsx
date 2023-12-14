@@ -10,6 +10,7 @@ import AddNewSeries from './components/addNewSeries/AddNewSeries';
 import SeriesDetails from './components/seriesDetails/SeriesDetails';
 import AuthGuard from './components/guards/AuthGuard';
 import EditSeries from './components/editSeries/editSeries';
+import Footer from './components/footer/Footer';
 
 
 
@@ -38,7 +39,7 @@ export function App() {
         </Routes>
       </div>
       
-
+      <Footer />
 
     </AuthProvider>
   );

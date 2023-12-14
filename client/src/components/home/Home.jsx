@@ -26,12 +26,15 @@ function Home({
 
             <div id="home-page">
                 <h1>Latest Series</h1>
+                <div id="show-cards">
 
                 {latestSeries.map(serie => <LatestSerie key={serie._id} {...serie} />)}
 
                 {!latestSeries.length && <p className="no-articles">No series yet</p>}
 
             </div>
+            </div>
+
         </section>
     );
 }

@@ -1,5 +1,7 @@
 #create-page {
-  max-width: 100em;
+  display: grid;
+  justify-content: space-evenly;
+  max-width: 50em;
   margin: 0 auto;
   padding: 20px;
   background-color: #ccc;
@@ -29,7 +31,7 @@
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 50px;
   margin-bottom: 20px;
 }
 

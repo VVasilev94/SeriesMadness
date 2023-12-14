@@ -3,6 +3,8 @@ import Path from "../../../paths";
 import { pathToUrl } from "../../../utils/pathUtils";
 import StarRating from "../../rating/StarRating";
 
+import './latestSerie.css'
+
 
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,8 +21,8 @@ export default function LatestSeries({
           <Card.Img variant="top" src={imageUrl} />
           <Card.Body>
             <Card.Title>{title}</Card.Title>
-            <StarRating/>
-            <Card.Text>
+          
+            <Card.Text className="card-description">
           Description: {description}
         </Card.Text>
     

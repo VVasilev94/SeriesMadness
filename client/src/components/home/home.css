@@ -26,7 +26,12 @@
   
   #home-page h1 {
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
+  }
+
+  #show-cards {
+    display: flex;
+    justify-content: space-evenly;
   }
   
   .no-articles {
