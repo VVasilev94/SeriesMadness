@@ -52,7 +52,7 @@ export default function AddNewSeries() {
                             <input type="text" id="producer" name="producer" placeholder="Enter producer..." />
 
                             <label htmlFor="description">Description:</label>
-                            <input type="text" id="description" name="description" placeholder="Enter short description..."/>
+                            <textarea type="text" id="description" name="description" placeholder="Enter short description..." ></textarea>
                         </div>
 
                         <input className="btn submit" type="submit" value="Create Serie" />

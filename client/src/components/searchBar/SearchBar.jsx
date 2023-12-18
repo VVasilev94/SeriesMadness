@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import handleSearch from './handleSearch';
 import { Link } from "react-router-dom";
 import './searchBar.css'
+import { FaSearch } from "react-icons/fa";
+
 
 
 export default function SearchBar(_id) {
@@ -21,6 +23,7 @@ export default function SearchBar(_id) {
   const handleInputChange = (e) => {
     const value = e.target.value;
     setSearchQuery(value);
+    performSearch()
     if (!value) {
       setSearchResults([]); // Clear search results when input is empty
     }
@@ -35,7 +38,8 @@ export default function SearchBar(_id) {
 			value={searchQuery}
 			onChange={handleInputChange}
 			/>
-			<button onInput={performSearch}>Search</button>
+      
+			<button onClick={performSearch}><FaSearch /></button>
       </div>
       <div className="dropdown">
         {searchQuery && searchResults.length > 0 && searchResults

@@ -2,10 +2,10 @@
 html{
     font: 12px/1.15 'Merriweather Sans';
     letter-spacing: 2px;
+    text-shadow: 0 0 1px;
 }
 
 body{
     font: inherit;
+    background-color:rgb(73, 124, 153);
   }
-
- 

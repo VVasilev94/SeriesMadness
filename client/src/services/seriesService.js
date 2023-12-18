@@ -14,16 +14,6 @@ export const getOne = async (serieId) => {
     return result;
 }
 
-export const getLatest = async () => {
-    const query = new URLSearchParams({
-        offset: 0,
-        pageSize: 3,
-    });
-
-    const result = await request.get(`${baseUrl}?${query}`);
-
-    return result;
-}
 
 export const create = async (serieData) => {
     const result = await request.post(baseUrl, serieData);

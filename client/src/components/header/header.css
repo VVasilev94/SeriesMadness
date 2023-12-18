@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   margin-left: auto; /* Pushes the navigation to the right */
-  font-size: 1em;
+  font-size: 1.3em;
 
 }
 
@@ -44,7 +44,7 @@
 }
 
 .navigation-container > div a:hover{
-  color: greenyellow;
+  color: rgb(11, 24, 216);
 }
 
 /* Show/hide elements based on authentication */

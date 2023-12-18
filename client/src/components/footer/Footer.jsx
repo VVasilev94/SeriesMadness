@@ -32,7 +32,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <p>
-          copyright &copy; <a href="/">Series Madness</a>{" "}
+          copyright &copy; <Link to="/">Series Madness</Link>
         </p>
         <div className="footer-menu">
           <ul className="f-menu">
@@ -40,7 +40,7 @@ export default function Footer() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="#">About</Link>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </div>

@@ -17,6 +17,12 @@
     max-width: 4em;
     max-height: 4em;
     border-radius: 3em;
+    min-width: 4em;
+  }
+
+  .search-wrapper svg {
+    height: 2em;
+    width: 2em;
   }
 
   .search-container {
@@ -39,10 +45,7 @@
 
  
 
-  
-  /* Style for the dropdown */
   .dropdown {
-    position: absolute;
     top: 100%;
     left: 0;
     z-index: 1000;
@@ -50,9 +53,11 @@
     border: 1px solid #ccc;
     border-top: none;
     width: 100%;
+    color: red;
+    
   }
   
-  /* Style for each dropdown item */
+ 
   .dropdown-item {
     padding: 8px;
     text-decoration: none;
@@ -60,7 +65,7 @@
     color: #333;
   }
   
-  /* Hover effect on dropdown items */
+
   .dropdown-item:hover {
     background-color: #ddd;
     color: #000;

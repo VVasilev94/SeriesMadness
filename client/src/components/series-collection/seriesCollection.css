@@ -1,12 +1,13 @@
 #catalog-page {
-    max-width: 800px;
+    max-width: 112em;
     margin: 0 auto;
     padding: 20px;
   }
   
   #catalog-page h1 {
-    font-size: 32px;
+    font-size: 3.5em;;
     margin-bottom: 20px;
+    padding: 2em;
   }
   
   .no-articles {
@@ -14,3 +15,29 @@
     font-style: italic;
     margin-top: 20px;
   }
+
+ .allSeries-info .img-wrapper{
+  max-width: 22em;
+  max-height: 34em;
+ }
+
+  .collection-wrapper{
+    display: flex;
+    justify-content:flex-start;
+    gap: 4em;
+    padding-bottom: 15em;
+    flex-wrap: wrap;
+  }
+
+  .card:hover {
+    scale: 1.1;
+  }
+  
+  .card-img-top {
+    max-height: 30em;
+}
+  
+.h5, h5 {
+  font-size: 2.4em;
+  text-shadow: 0 0 2px;
+}

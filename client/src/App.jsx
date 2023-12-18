@@ -11,6 +11,7 @@ import SeriesDetails from './components/seriesDetails/SeriesDetails';
 import AuthGuard from './components/guards/AuthGuard';
 import EditSeries from './components/editSeries/editSeries';
 import Footer from './components/footer/Footer';
+import About from './components/about/About';
 
 
 
@@ -27,6 +28,8 @@ export function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path="/series/:serieId" element={<SeriesDetails />} />
+          <Route path="/about" element={<About />} />
+          
           
 
           <Route element={<AuthGuard />}>

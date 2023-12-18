@@ -50,7 +50,7 @@ export default function Login() {
           <input
             type="email"
             id="email"
-            name={LoginKeys.Email}
+            name="email"
             placeholder="email"
             onChange={onChange}
             value={values[LoginKeys.Email]}
@@ -60,7 +60,7 @@ export default function Login() {
           <input
             type="username"
             id="username"
-            name={LoginKeys.Username}
+            name="username"
             placeholder="username"
             onChange={onChange}
             value={values[LoginKeys.Username]}
@@ -70,7 +70,7 @@ export default function Login() {
           <input
             type="password"
             id="password"
-            name={LoginKeys.Password}
+            name="password"
             placeholder="password"
             onChange={onChange}
             value={values[LoginKeys.Password]}

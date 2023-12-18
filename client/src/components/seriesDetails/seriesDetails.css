@@ -8,6 +8,8 @@
   #series-details h1 {
     font-size: 32px;
     margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 0.5em;
     
   }
   
@@ -15,27 +17,23 @@
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
-    background-color:antiquewhite;
+    background-color:rgb(118, 216, 248);
   }
   
   .serie-header {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
   }
   
   .serie-img {
-    width: 200px;
+  min-width: 25em;
   height: auto;
-  margin-bottom: 10px;
   object-fit: contain;
-    
+  border-radius: 5%;
   }
   
   .serie-header h1 {
     font-size: 24px;
-    margin: 5px 0;
   }
   
   .year,
@@ -43,7 +41,7 @@
   .producer
  {
     font-size: 16px;
-    color: #888;
+    color: #1d1a1a;
     margin: 5px 0;
   }
   
@@ -53,11 +51,40 @@
   
   .details-comments {
     margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
   }
   
-  .comment {
+  /* Style the "Comments:" heading */
+  .details-comments h2 {
+    font-size: 1.2rem;
     margin-bottom: 10px;
+    
   }
+  
+  /* Style individual comments */
+  .comment {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .details-comments ul li {
+    list-style: none;
+  }
+  
+  .comment p {
+    margin: 0;
+  }
+  
+  .comment p::before {
+   
+    margin-right: 5px;
+  }
+.details-comments .username {
+  color:orange ;
+}
   
   .no-comment {
     font-style: italic;
@@ -68,16 +95,41 @@
     margin-top: 20px;
     text-align: center;
   }
-  
+
+
   .button {
     display: inline-block;
-    padding: 8px 16px;
     margin-right: 10px;
-    background-color:darkcyan;
+    background-color:rgb(19, 81, 250);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
   }
+
+  .info-section  button{
+    font-size: medium;
+    padding: 10px 18px;
+    letter-spacing: 1.5px;
+    border: none;
+   transition: color 0.7s;
+
+}
+
+  .info-section a {
+    font-size: medium;
+    padding: 10px 30px;
+    letter-spacing: 1.5px;
+    transition: color 0.7s;
+
+  }
+
+  .info-section  button:hover,
+  .info-section a:hover{
+    color: blue;
+    min-height: 2.5em;
+  }
+
+
   
   .create-comment {
     margin-top: 20px;
@@ -100,7 +152,7 @@
   }
   
   .btn.submit {
-    background-color:darkcyan;
+    background-color:rgb(19, 81, 250);
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -109,5 +161,27 @@
   }
   
   .btn.submit:hover {
-    background-color:darkcyan;
+    background-color:rgb(19, 81, 250);
+  }
+
+  .likes-wrapper{
+    padding: 6em 0 3em 0;
+    text-align: center;
+  }
+
+  .details-content-wrapper{
+    background: #fff;
+    min-width: 30em;
+    min-height: 37em;
+    border-radius: 3%;
+    margin: 1em ;
+    padding-top: 6em;
+
+    
+  }
+
+  .details-content-wrapper > * {
+    text-align: left;
+    font-size: 1.2em;
+    padding-left: 1.2em;
   }

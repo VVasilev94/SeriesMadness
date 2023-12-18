@@ -1,6 +1,6 @@
 #welcome-world {
-    background-color: #f0f0f0;
     padding: 20px;
+    min-height: 85vh;
   }
   
   .welcome-message {
@@ -8,30 +8,28 @@
     margin-bottom: 20px;
   }
   
-  .welcome-message h2 {
-    font-size: 24px;
+  .welcome-message h1 {
+    font-size: 30px;
     margin-bottom: 10px;
   }
   
-  .welcome-message h3 {
-    font-size: 18px;
-    color: #777;
-  }
-  
+
   #home-page {
-    max-width: 800px;
+    max-width: 1049px;
     margin: 0 auto;
     padding: 20px;
   }
   
-  #home-page h1 {
-    font-size: 32px;
+  #home-page h2 {
+    font-size: 25px;
     margin-bottom: 10%;
+    text-align: center;
+    text-shadow: 0 0 3px;
   }
 
   #show-cards {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   
   .no-articles {

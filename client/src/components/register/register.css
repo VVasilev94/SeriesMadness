@@ -9,12 +9,10 @@
 
 .register-container {
   display: flex;
-  width: 100%;
-  max-width: 400px;
+  background-color: #f4f4f4;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 3px;
 }
 
 .register-container .container {
@@ -36,7 +34,7 @@ label {
 input[type='email'],
 input[type='username'],
 input[type='password'] {
-  width: 100%;
+  width: 24em;
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 5px;
@@ -53,6 +51,7 @@ input[type='password'] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  max-width: 8em;
 }
 
 .btn.submit:hover {

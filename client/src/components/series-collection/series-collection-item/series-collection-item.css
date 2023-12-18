@@ -4,7 +4,17 @@
     align-items: center;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 2em;
+    background: lightblue;
+    transition: scale 0.5s;
+    border-radius: 1%;
+
+
+  }
+
+
+  .card-description:hover{
+    scale: 1.1;
   }
   
   .allSeries-info {
@@ -12,9 +22,10 @@
   }
   
   .allSeries-info img {
-    width: 200px;
-    height: auto;
+    min-width: 22em;
+    max-height: 30em;
     margin-bottom: 10px;
+    
   }
   
   .allSeries-info h1 {

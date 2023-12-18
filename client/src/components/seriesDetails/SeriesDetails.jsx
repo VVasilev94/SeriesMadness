@@ -78,24 +78,36 @@ export default function SeriesDetails() {
             <h1>Series Details</h1>
             <div className="info-section">
                 <div className="serie-header">
-                    <img className="serie-img" src={series.imageUrl} alt={series.title} />
-                    <div>
-                        <LikeSeries userId={userId} serieId={serieId} likes={likes} />
+                    <div className="details-img-wrapper">
+                        <img className="serie-img" src={series.imageUrl} alt={series.title} />
                     </div>
-                    <h1>{series.title}</h1>
-                    <span className="year">Year: {series.year}</span>
-                    <p className="genres">Genres: {series.genres}</p>
-                    <p className="producer">Producer: {series.producer}</p>
+                    <div className="details-content-wrapper">
+                        <h1>{series.title}</h1>
+                        <span className="year">Year: {series.year}</span>
+                        <p className="genres">Genres: {series.genres}</p>
+                        <p className="producer">Producer: {series.producer}</p>
+                        <p className="description">Description: {series.description}</p>
+                    </div>
                 </div>
 
-                <p className="description">Description: {series.description}</p>
+
+                    <div className="likes-wrapper">
+                        <LikeSeries userId={userId} serieId={serieId} likes={likes} />
+                    </div>
+
+                {userId === series._ownerId && (
+                    <div className="buttons">
+                        <Link to={pathToUrl(Path.SerieEdit, { serieId })} className="button">Edit</Link>
+                        <button className="button" onClick={deleteButtonClickHandler}>Delete</button>
+                    </div>
+                )}
 
                 <div className="details-comments">
                     <h2>Comments:</h2>
                     <ul>
                         {comments.map(({ _id, text, owner: { username } }) => (
                             <li key={_id} className="comment">
-                                <p>{username}: {text}</p>
+                               <p><span className="username">{username}:</span> {text}</p>
                             </li>
                         ))}
                     </ul>
@@ -105,12 +117,7 @@ export default function SeriesDetails() {
                     )}
                 </div>
 
-                {userId === series._ownerId && (
-                    <div className="buttons">
-                        <Link to={pathToUrl(Path.SerieEdit, { serieId })} className="button">Edit</Link>
-                        <button className="button" onClick={deleteButtonClickHandler}>Delete</button>
-                    </div>
-                )}
+                
             </div>
 
             <article className="create-comment">

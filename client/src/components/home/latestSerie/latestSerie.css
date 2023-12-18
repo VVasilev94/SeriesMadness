@@ -6,7 +6,10 @@
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+  max-width: 7em;
+  font-size: 13px;
 }
+
 
 .details-btn:hover {
   background-color: blue;
@@ -14,4 +17,14 @@
 
 .card-description {
   display: flex;
+}
+
+.card-img-top {
+  height: 27em;
+}
+
+.card-body {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

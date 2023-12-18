@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import * as likesService from "../../services/likeService";
+import { AiFillLike } from "react-icons/ai";
 
 
 export default function LikeSeries({ serieId, userId }) {
@@ -32,13 +33,14 @@ export default function LikeSeries({ serieId, userId }) {
       }
     }
     
-
     
   };
     return(
+     
         <div id="likes">Likes: <span id="likes-count">{likesCount}</span>
         <div 
-        id="action-buttons"><Link to={`/series/${serieId}`} id="like-btn" onClick={handleLikeClick}>Like</Link>
+        id="action-buttons"><Link to={`/series/${serieId}`} id="like-btn"
+        style={{ fontSize: '3.5em' }} onClick={handleLikeClick}> <AiFillLike/></Link>
         </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Path from "../../../paths";
 import { pathToUrl } from "../../../utils/pathUtils";
-import StarRating from "../../rating/StarRating";
+
 
 import './latestSerie.css'
 
@@ -17,7 +17,7 @@ export default function LatestSeries({
     description
 }) {
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '20rem' }}>
           <Card.Img variant="top" src={imageUrl} />
           <Card.Body>
             <Card.Title>{title}</Card.Title>
