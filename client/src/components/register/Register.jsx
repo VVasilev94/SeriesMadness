@@ -46,9 +46,9 @@ export default function Register() {
   };
 
   return (
-    <section id="register-page" className="register-container">
+    <section id="register-page" className="register-field">
       <form id="register" onSubmit={handleSubmit}>
-        <div className="container">
+        <div className="field">
           <div className="brand-logo"></div>
           <h1>Register</h1>
 
@@ -89,7 +89,7 @@ export default function Register() {
           />
 
           <input className="btn submit" type="submit" value="Register" />
-          <ToastContainer
+          {/* <ToastContainer
             position="bottom-center"
             autoClose={3000}
             hideProgressBar={false}
@@ -100,7 +100,7 @@ export default function Register() {
             draggable
             pauseOnHover
             theme="light"
-          />
+          /> */}
 
           <p className="field">
             <span>

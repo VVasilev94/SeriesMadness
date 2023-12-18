@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
+
 
 import * as seriesService from '../../services/seriesService';
 
@@ -17,7 +19,7 @@ export default function AddNewSeries() {
         const isAnyFieldEmpty = Object.values(serieData).some((value) => value === '');
     if (isAnyFieldEmpty) {
       
-      alert('All fields are required.');
+      toast.error('All fields are required.');
       return;
     }
 
@@ -25,9 +27,12 @@ export default function AddNewSeries() {
             await seriesService.create(serieData);
 
             navigate('/series');
+      toast.success('Created Successful');
+
         } catch (err) {
             // Error notification
-            console.log(err);
+      toast.error(`${err.message}`);
+
         }
     }
     return(

@@ -43,7 +43,7 @@ export default function Login() {
   return (
     <section id="login-page">
       <form id="login" onSubmit={handleSubmit}>
-        <div>
+        <div className="login-wrapper">
           <div className="brand-logo"></div>
           <h1>Login</h1>
           <label htmlFor="email">Email:</label>
@@ -76,7 +76,7 @@ export default function Login() {
             value={values[LoginKeys.Password]}
           />
           <input type="submit"  value="Login" />
-          <ToastContainer
+          {/* <ToastContainer
             position="bottom-center"
             autoClose={3000}
             hideProgressBar={false}
@@ -87,7 +87,7 @@ export default function Login() {
             draggable
             pauseOnHover
             theme="light"
-          />
+          /> */}
           <p className="field">
             <span>
               If you don't have profile click <Link to="/register">here</Link>

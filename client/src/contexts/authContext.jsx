@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import * as authService from '../services/authService';
 import usePersistedState from "../hooks/usePersistedState";
+import { toast } from "react-toastify";
 
 
 const AuthContext = createContext();
@@ -14,16 +15,21 @@ export const AuthProvider = ({
     const [auth, setAuth] = usePersistedState('auth', {});
 
     const loginSubmitHandler = async (values) => {
-        const result = await authService.login(values.email, values.username, values.password);
+      try{ const result = await authService.login(values.email, values.username, values.password);
 
         setAuth(result);
 
         localStorage.setItem('accessToken', result.accessToken);
 
         navigate("/");
+        toast.success('Login Successful')
+      } catch(error) {
+        toast.error(`${error.message}`)
+      }
     };
 
     const registerSubmitHandler = async (values) => {
+        try{
         const result = await authService.register(values.email, values.username, values.password);
 
         setAuth(result);
@@ -31,6 +37,10 @@ export const AuthProvider = ({
         localStorage.setItem('accessToken', result.accessToken);
 
         navigate("/");
+        toast.success('Register Successful')
+    }catch(error){
+        toast.error(`${error.message}`)
+    }
     };
 
     const logoutHandler = () => {

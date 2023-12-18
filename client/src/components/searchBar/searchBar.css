@@ -46,6 +46,12 @@
  
 
   .dropdown {
+    margin-top: -27px;
+    position: absolute !important;
+    max-width: 26em;
+    margin-left: 24px;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
     top: 100%;
     left: 0;
     z-index: 1000;
