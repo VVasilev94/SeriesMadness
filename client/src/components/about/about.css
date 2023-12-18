@@ -1,0 +1,26 @@
+.about-page {
+    max-width: 800px;
+    margin:0 auto;
+    padding: 10em 1em;
+    font-family: Arial, sans-serif;
+    text-indent: 3em;
+    text-shadow: 0 0 3px;
+    font-style: oblique;
+    font-size: inherit;
+  }
+  
+
+  .about-title {
+    font-size: 2.5rem;
+    color: #dacdcd;
+    margin-bottom: 20px;
+  }
+  
+
+  .about-page p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #dacdcd;
+    margin-bottom: 15px;
+    border-radius: 1%;
+  }
